@@ -1,0 +1,142 @@
+.navbar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10%;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 40%;
+    padding: 10px 20px;
+}
+
+.menuLogo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+.logo {
+    font-size: 1.875rem;
+}
+
+.menuIcon {
+    height: 33px;
+    padding: 5px;
+    width: auto;
+    cursor: pointer;
+    display: none;
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 0 3%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .items {
+        display: none;
+    }
+
+    .menuIcon {
+        display: block;
+    }
+
+    .mobileMenu {
+        margin-top: 20px;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: calc(100vh - 80px);
+        display: flex;
+        flex-direction: column;
+        font-size: 1.063rem;
+        align-items: center;
+        z-index: 1000;
+        animation: reveal 0.8s ease;
+    }
+
+    @keyframes reveal {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .mobileMenu li {
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        cursor: pointer;
+    }
+
+    .mobileMenu li:hover {
+        background-color: rgb(233, 233, 233);
+    }
+}
+
+.logo:hover,
+.menuIcon:hover {
+    color: rgb(70, 70, 70);
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+.items li {
+    border-radius: 10px;
+    padding: 5px 15px;
+    cursor: pointer;
+    position: relative;
+    text-wrap: nowrap;
+}
+
+.items li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    height: 2px;
+    width: 0;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.items li:hover::after {
+    width: 100%;
+}
+
+.navIcons {
+    min-width: 10%;
+    height: 100%;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon {
+    min-height: 32px;
+    width: auto;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.2s ease;
+}
+
+.icon:hover {
+    background-color: rgb(226, 226, 226);
+    transform: scale(1.05);
+}
