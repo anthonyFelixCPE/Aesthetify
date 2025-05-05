@@ -1,10 +1,19 @@
 import styles from "./styles/page.module.css";
-import Navbar from "./components/Navbar";
+import DarkBGButton from "./components/DarkBGButton";
 
 export default function Home() {
     return (
         <div className={styles.page}>
-            <Navbar />
+            <div className={styles.hero}>
+                <div className={styles.textButton}>
+                    <h1>Designed for Comfort, Crafted for Style.</h1>
+                    <p>
+                        Find the perfect blend of luxury, comfort, and timeless
+                        design for every space
+                    </p>
+                    <DarkBGButton>Shop Now</DarkBGButton>
+                </div>
+            </div>
         </div>
     );
 }
