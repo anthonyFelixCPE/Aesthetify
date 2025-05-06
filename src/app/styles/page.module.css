@@ -1,0 +1,61 @@
+.page {
+    padding: 0 clamp(2%, 8vw, 10%);
+}
+
+.hero {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    padding: 10% clamp(0px, 3vw, 40px);
+    gap: 20px;
+}
+
+.textButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    width: 45%;
+}
+
+.textButton h1 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+.textButton p {
+    font-size: clamp(0.8rem, 2.5vw, 1.2rem);
+}
+
+.imageContainer {
+    position: relative;
+    min-height: 100%;
+    width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .textButton {
+        width: 100%;
+    }
+
+    .imageContainer {
+        height: 400px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .textButton {
+        gap: 10px;
+    }
+
+    .imageContainer {
+        height: 250px;
+    }
+}
+
+
+

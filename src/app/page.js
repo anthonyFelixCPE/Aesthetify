@@ -1,5 +1,7 @@
 import styles from "./styles/page.module.css";
 import DarkBGButton from "./components/DarkBGButton";
+import Image from "next/image";
+import HeroImage from "../images/hero-image.jpg";
 
 export default function Home() {
     return (
@@ -12,6 +14,14 @@ export default function Home() {
                         design for every space
                     </p>
                     <DarkBGButton>Shop Now</DarkBGButton>
+                </div>
+                <div className={styles.imageContainer}>
+                    <Image
+                        src={HeroImage}
+                        alt="Hero Image"
+                        layout="fill"
+                        objectFit="cover"
+                    />
                 </div>
             </div>
         </div>
