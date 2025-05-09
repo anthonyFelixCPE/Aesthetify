@@ -2,6 +2,7 @@ import styles from "./styles/page.module.css";
 import DarkBGButton from "./components/DarkBGButton";
 import Image from "next/image";
 import HeroImage from "../images/hero-image.jpg";
+import CustomImage from "./components/CustomImage";
 
 export default function Home() {
     return (
@@ -16,11 +17,10 @@ export default function Home() {
                     <DarkBGButton>Shop Now</DarkBGButton>
                 </div>
                 <div className={styles.imageContainer}>
-                    <Image
+                    <CustomImage
                         src={HeroImage}
                         alt="Hero Image"
-                        layout="fill"
-                        objectFit="cover"
+                        className={styles.heroImage}
                     />
                 </div>
             </div>
