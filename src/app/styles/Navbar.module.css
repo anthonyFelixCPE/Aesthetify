@@ -3,8 +3,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 10%;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1); 
+    padding: 10px clamp(2%, 8vw, 10%);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
 }
 
 .items {
@@ -63,7 +63,7 @@
         font-size: 1.063rem;
         align-items: center;
         z-index: 1000;
-        animation: reveal 0.8s ease;
+        animation: reveal 0.5s ease;
     }
 
     @keyframes reveal {
@@ -72,6 +72,19 @@
         }
         100% {
             transform: translateX(0);
+        }
+    }
+
+    .closeAnimation {
+        animation: slideOut 0.5s ease forwards;
+    }
+
+    @keyframes slideOut {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
         }
     }
 

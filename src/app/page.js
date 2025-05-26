@@ -1,8 +1,11 @@
 import styles from "./styles/page.module.css";
 import DarkBGButton from "./components/DarkBGButton";
-import Image from "next/image";
 import HeroImage from "../images/hero-image.jpg";
 import CustomImage from "./components/CustomImage";
+import LivingIMG from "../images/category-living room.jpg";
+import BedIMG from "../images/category-bed room.jpg";
+import DiningIMG from "../images/category-dining room.jpg";
+import { FaArrowRight } from "react-icons/fa6";
 
 export default function Home() {
     return (
@@ -22,6 +25,53 @@ export default function Home() {
                         alt="Hero Image"
                         className={styles.heroImage}
                     />
+                </div>
+            </div>
+            <div className={styles.category}>
+                <div className={styles.header}>
+                    <h1>Shop by Category</h1>
+                    <p>Explore styles made for every space.</p>
+                </div>
+                <div className={styles.cardContainer}>
+                    <div className={styles.card}>
+                        <CustomImage
+                            src={LivingIMG}
+                            alt="Living Room Image"
+                            className={styles.livingRoom}
+                        />
+                        <div className={styles.cardText}>
+                            <h2>Living Room</h2>
+                            <p>
+                                Shop Now <FaArrowRight />
+                            </p>
+                        </div>
+                    </div>
+                    <div className={styles.card}>
+                        <CustomImage
+                            src={BedIMG}
+                            alt="Living Room Image"
+                            className={styles.livingRoom}
+                        />
+                        <div className={styles.cardText}>
+                            <h2>Bed Room</h2>
+                            <p>
+                                Shop Now <FaArrowRight />
+                            </p>
+                        </div>
+                    </div>
+                    <div className={styles.card}>
+                        <CustomImage
+                            src={DiningIMG}
+                            alt="Living Room Image"
+                            className={styles.livingRoom}
+                        />
+                        <div className={styles.cardText}>
+                            <h2>Dining Room</h2>
+                            <p>
+                                Shop Now <FaArrowRight />
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
