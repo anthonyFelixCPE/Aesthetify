@@ -5,7 +5,7 @@ import CustomImage from "./components/CustomImage";
 import LivingIMG from "../images/category-living room.jpg";
 import BedIMG from "../images/category-bed room.jpg";
 import DiningIMG from "../images/category-dining room.jpg";
-import { FaArrowRight } from "react-icons/fa6";
+import CategoryCard from "./components/CategoryCard";
 
 export default function Home() {
     return (
@@ -33,45 +33,21 @@ export default function Home() {
                     <p>Explore styles made for every space.</p>
                 </div>
                 <div className={styles.cardContainer}>
-                    <div className={styles.card}>
-                        <CustomImage
-                            src={LivingIMG}
-                            alt="Living Room Image"
-                            className={styles.livingRoom}
-                        />
-                        <div className={styles.cardText}>
-                            <h2>Living Room</h2>
-                            <p>
-                                Shop Now <FaArrowRight />
-                            </p>
-                        </div>
-                    </div>
-                    <div className={styles.card}>
-                        <CustomImage
-                            src={BedIMG}
-                            alt="Living Room Image"
-                            className={styles.livingRoom}
-                        />
-                        <div className={styles.cardText}>
-                            <h2>Bed Room</h2>
-                            <p>
-                                Shop Now <FaArrowRight />
-                            </p>
-                        </div>
-                    </div>
-                    <div className={styles.card}>
-                        <CustomImage
-                            src={DiningIMG}
-                            alt="Living Room Image"
-                            className={styles.livingRoom}
-                        />
-                        <div className={styles.cardText}>
-                            <h2>Dining Room</h2>
-                            <p>
-                                Shop Now <FaArrowRight />
-                            </p>
-                        </div>
-                    </div>
+                    <CategoryCard
+                        src={LivingIMG}
+                        alt="Living Room Image"
+                        title="Living Room"
+                    />
+                    <CategoryCard
+                        src={BedIMG}
+                        alt="Dining Room Image"
+                        title="Bed Room"
+                    />
+                    <CategoryCard
+                        src={DiningIMG}
+                        alt="Dining Room Image"
+                        title="Dining"
+                    />
                 </div>
             </div>
         </div>
