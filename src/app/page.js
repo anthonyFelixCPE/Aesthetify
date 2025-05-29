@@ -6,6 +6,10 @@ import LivingIMG from "../images/category-living room.jpg";
 import BedIMG from "../images/category-bed room.jpg";
 import DiningIMG from "../images/category-dining room.jpg";
 import CategoryCard from "./components/CategoryCard";
+import ProductCard from "./components/ProductCard";
+import Product1Img from "../images/Product Images/product-1.jpg";
+import Product2Img from "../images/Product Images/product-2.jpg";
+import Product3Img from "../images/Product Images/product-3.jpg";
 
 export default function Home() {
     return (
@@ -47,6 +51,30 @@ export default function Home() {
                         src={DiningIMG}
                         alt="Dining Room Image"
                         title="Dining"
+                    />
+                </div>
+            </div>
+            <div className={styles.featuredProducts}>
+                <div className={styles.header}>
+                    <h1>Customer Favorites</h1>
+                    <p>
+                        Thoughtfully selected pieces to complement your
+                        lifestyle.
+                    </p>
+                </div>
+                <div className={styles.productsContainer}>
+                    <ProductCard
+                        productImg={Product1Img}
+                        productName="Light Finish Wooden Table Set"
+                        productPrice={2568.6}
+                    /><ProductCard
+                        productImg={Product2Img}
+                        productName="Wooden Center Table"
+                        productPrice={1700}
+                    /><ProductCard
+                        productImg={Product3Img}
+                        productName="Large 3 Seat Sofa"
+                        productPrice={3400}
                     />
                 </div>
             </div>
