@@ -5,7 +5,9 @@ import CustomImage from "./CustomImage";
 
 function ProductCard({ productImg, productName, productPrice }) {
     return (
-        <div className={styles.productCard}>
+        <div
+            className={styles.productCard}
+        >
             <div className={styles.imgContainer}>
                 <CustomImage src={productImg} alt={productName} />
             </div>

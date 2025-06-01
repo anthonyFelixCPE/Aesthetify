@@ -34,8 +34,8 @@
 
 .category {
     width: 100%;
-    background-color: #f7f7f7;
-    padding: clamp(0px, 10vw, 5%) clamp(0px, 10vw, 15%);
+    background-color: var(--semiDarkBG);
+    padding: var(--section-padding);
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -69,6 +69,7 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+    align-items: center;
 }
 
 .productsContainer {
@@ -77,6 +78,172 @@
     gap: 50px;
     width: 100%;
     gap: 5rem;
+}
+
+.newsletter {
+    width: 100%;
+    background-color: var(--semiDarkBG);
+    padding: var(--section-padding);
+    display: flex;
+    gap: 6%;
+}
+
+.headerText {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.headerText h2 {
+    font-size: 2.188rem;
+}
+
+.headerText h3 {
+    font-weight: 400;
+    opacity: 0.6;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+}
+
+.inputForm {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 20px;
+    position: relative;
+}
+
+.formControls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    padding: 0 15px;
+    border: 1px solid rgba(128, 128, 128, 0.473);
+    flex: 1;
+    border-radius: 8px;
+}
+
+.inputContainerFocused {
+    border: 1px solid black;
+}
+
+.emailIcon {
+    font-size: 20px;
+    opacity: 0.6;
+}
+
+.emailInput {
+    height: 100%;
+    width: 100%;
+    padding: 8px 12px;
+    border: none;
+}
+
+.emailInput:focus {
+    border: none;
+    outline: none;
+}
+
+.consentNotice {
+    display: flex;
+    flex-direction: column;
+}
+
+.consentNotice li {
+    font-size: 0.8rem;
+    color: rgba(128, 128, 128, 0.9);
+}
+
+.subscribe {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.loader {
+    width: 30px;
+    aspect-ratio: 2;
+    --_g: no-repeat radial-gradient(circle closest-side, #ffffff 90%, #0000);
+    background: var(--_g) 0% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
+    background-size: calc(100% / 4) 50%;
+    animation: l3 1s infinite linear;
+}
+
+.successMsg {
+    background-color: rgb(224, 253, 224);
+    border: 1px solid rgba(0, 224, 0, 0.555);
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    animation: fadeSlideIn 1s ease-in-out;
+}
+
+.fadeInUp {
+    animation: fadeSlideIn 1s ease-in-out;
+}
+
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.iconText {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    align-self: flex-start;
+}
+
+.iconText h2 {
+    font-weight: 400;
+    font-size: clamp(1.1rem, 2.5vw, 1.2rem);
+
+    color: rgb(0, 85, 0);
+}
+
+.successMsg p {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+
+    color: rgb(0, 85, 0);
+}
+
+.checkIcon {
+    font-size: 25px;
+    color: rgb(2, 202, 2);
+}
+
+@keyframes l3 {
+    20% {
+        background-position: 0% 0%, 50% 50%, 100% 50%;
+    }
+    40% {
+        background-position: 0% 100%, 50% 0%, 100% 50%;
+    }
+    60% {
+        background-position: 0% 50%, 50% 100%, 100% 0%;
+    }
+    80% {
+        background-position: 0% 50%, 50% 50%, 100% 100%;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -91,6 +258,33 @@
     .imageContainer {
         height: 400px;
         width: 100%;
+    }
+
+    .newsletter {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .inputForm {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .formControls {
+        flex-direction: column;
+    }
+
+    .subscribe {
+        min-width: 100%;
+    }
+
+    .inputContainer {
+        height: 50px;
+    }
+
+    .emailInput {
+        font-size: 16px;
     }
 }
 

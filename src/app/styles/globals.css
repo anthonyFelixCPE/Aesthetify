@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap");
 
+:root {
+    --section-padding: clamp(0px, 10vw, 5%) clamp(0px, 10vw, 15%);
+    --semiDarkBG: #f7f7f7;
+}
+
 *,
 *::before,
 *::after {
