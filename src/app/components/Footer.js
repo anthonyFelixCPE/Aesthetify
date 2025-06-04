@@ -56,7 +56,7 @@ function Footer() {
                     </ul>
                 </div>
             </div>
-            <div className="divider"></div>
+            <div className={styles.divider}></div>
             <div className={styles.copyright}>
                 <p>
                     &copy; {new Date().getFullYear()} Aesthetify. All rights
